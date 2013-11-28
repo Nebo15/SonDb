@@ -1,0 +1,14 @@
+{
+	"name": "nebo15/BrianDb",
+	"type": "framework",
+	"description": "JSON ORM on PHP. I know it sounds dangerous.",
+	"keywords": ["json", "orm", "database", "php", "framework"],
+	"homepage": "https://github.com/Nebo15/BrianDb",
+	"license": "LGPL-2.1",
+	"require": {
+		"php": ">=5.3"
+	},
+	"autoload": {
+        "files": ["src/BrianDb.php"]
+    }
+}

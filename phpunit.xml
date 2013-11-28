@@ -1,0 +1,14 @@
+<phpunit
+	convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+   	convertWarningsToExceptions="true">
+  	<testsuites>
+    	<testsuite name="BrianDb">
+      		<directory>tests</directory>
+    	</testsuite>
+  	</testsuites>
+  	<php>
+		<ini name="display_errors" value="On" />
+    	<ini name="error_reporting" value="32767" />
+	</php>
+</phpunit>
