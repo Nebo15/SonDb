@@ -1,14 +1,14 @@
 {
-	"name": "nebo15/BrianDb",
+	"name": "nebo15/J5onD8",
 	"type": "framework",
 	"description": "JSON ORM on PHP. I know it sounds dangerous.",
 	"keywords": ["json", "orm", "database", "php", "framework"],
-	"homepage": "https://github.com/Nebo15/BrianDb",
+	"homepage": "https://github.com/Nebo15/J5onD8",
 	"license": "LGPL-2.1",
 	"require": {
 		"php": ">=5.3"
 	},
 	"autoload": {
-        "files": ["src/BrianDb.php"]
+        "files": ["src/J5onD8.php"]
     }
 }

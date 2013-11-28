@@ -1,6 +1,6 @@
 <?php
 
-abstract class BrianDbModel
+abstract class J5onD8Model
 {
 	static function load()
 	{
@@ -10,13 +10,13 @@ abstract class BrianDbModel
 		{
 			$model_info_std_class = json_decode(file_get_contents($json_file));
 			if(!$model_info_std_class)
-				return new BrianDbCollection($class, $json_file);
-			$collection = new BrianDbCollection($class, $json_file);
+				return new J5onD8Collection($class, $json_file);
+			$collection = new J5onD8Collection($class, $json_file);
 			foreach($model_info_std_class as $id => $item)
 				$collection[$id] = self::convertStdClassToObject($class, $item);
 			return $collection;
 		}
-		return new BrianDbCollection($class, $json_file);
+		return new J5onD8Collection($class, $json_file);
 	}
 
 	static function getJsonFile()
@@ -24,9 +24,9 @@ abstract class BrianDbModel
 		$class_name = get_called_class();
 		$class_name_undescore = strtolower(preg_replace('/([a-z])([A-Z])/', '$1_$2', $class_name));
 		if(property_exists($class_name, 'is_private') && $class_name::$is_private)
-			return BrianDb::$private_dir.$class_name_undescore.'.json';
+			return J5onD8::$private_dir.$class_name_undescore.'.json';
 		else
-			return BrianDb::$public_dir.$class_name_undescore.'.json';
+			return J5onD8::$public_dir.$class_name_undescore.'.json';
 	}
 
 	static function convertStdClassToObject($class, $stdObject)

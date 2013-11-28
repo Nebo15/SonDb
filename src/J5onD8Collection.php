@@ -1,6 +1,6 @@
 <?php
 
-class BrianDbCollection implements ArrayAccess, Countable
+class J5onD8Collection implements ArrayAccess, Countable
 {
 	public $model_class;
 	public $json_file;
