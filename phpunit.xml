@@ -3,7 +3,7 @@
     convertNoticesToExceptions="true"
    	convertWarningsToExceptions="true">
   	<testsuites>
-    	<testsuite name="J5onD8">
+    	<testsuite name="SonDb">
       		<directory>tests</directory>
     	</testsuite>
   	</testsuites>

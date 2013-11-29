@@ -1,6 +1,6 @@
 <?php
 
-class J5onD8Collection implements ArrayAccess, Countable
+class SonDbCollection implements ArrayAccess, Countable
 {
 	public $model_class;
 	public $json_file;
@@ -23,6 +23,7 @@ class J5onD8Collection implements ArrayAccess, Countable
             throw new Exception('Where is my ID, Lebowsky?');
         else
             $this->items[$offset] = $value;
+        return $this;
     }
 
     function offsetExists($offset)

@@ -1,6 +1,6 @@
 <?php
 
-class J5onD8TestUser extends J5onD8Model
+class SonDbTestUser extends SonDbModel
 {
 	public static $is_private = true;
 }
