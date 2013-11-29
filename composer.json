@@ -1,7 +1,7 @@
 {
-	"name": "nebo15/SonDb",
+	"name": "nebo15/sondb",
 	"type": "framework",
-	"description": "JSON ORM on PHP. I know it sounds dangerous.",
+	"description": "Thin JSON-based database for web application",
 	"keywords": ["json", "orm", "database", "php", "framework"],
 	"homepage": "https://github.com/Nebo15/SonDb",
 	"license": "LGPL-2.1",
