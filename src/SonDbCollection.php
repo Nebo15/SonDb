@@ -14,7 +14,13 @@ class SonDbCollection implements ArrayAccess, Countable
 
 	function save()
 	{
-		return file_put_contents($this->json_file, json_encode($this->items, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+        foreach($this->items as $id => $item)
+            $item->_id = $id;
+        $json = json_encode(
+            array_values($this->items),
+            JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT
+        );
+		return file_put_contents($this->json_file, $json);
 	}
 
 	function offsetSet($offset, $value)

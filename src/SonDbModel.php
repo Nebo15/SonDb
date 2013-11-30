@@ -12,8 +12,10 @@ abstract class SonDbModel
 			if(!$model_info_std_class)
 				return new SonDbCollection($class, $json_file);
 			$collection = new SonDbCollection($class, $json_file);
-			foreach($model_info_std_class as $id => $item)
-				$collection[$id] = self::convertStdClassToObject($class, $item);
+			foreach($model_info_std_class as $item)
+			{
+				$collection[$item->_id] = self::convertStdClassToObject($class, $item);
+			}
 			return $collection;
 		}
 		return new SonDbCollection($class, $json_file);

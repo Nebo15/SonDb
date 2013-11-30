@@ -100,4 +100,20 @@ class SonDbModelTest extends PHPUnit_Framework_TestCase
         $loaded_users = SonDbTestUser::load();
         $this->assertEquals($user->name, $loaded_users['testSave_Escaping']->name);
     }
+
+    function testSave_JsonFormat()
+    {
+        $users = SonDbTestUser::load();
+        $user = new SonDbTestUser;
+        $user->name = 'testSave_JsonFormat';
+        $users['first'] = $user;
+        $users->save();
+
+        $json = json_decode(file_get_contents(SonDbTestUser::getJsonFile()));
+        $this->assertInternalType('array', $json);
+        $this->assertEquals(1, count($json));
+        $this->assertInternalType('object', $json[0]);
+        $this->assertEquals('first', $json[0]->_id);
+        $this->assertEquals('testSave_JsonFormat', $json[0]->name);
+    }
 }
